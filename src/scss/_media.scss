@@ -1,0 +1,119 @@
+@media (max-width: 1366px) {
+  .products-option {
+    height: 1070px;
+  }
+
+}
+@media (max-width: 1200px) {
+  .products-option {
+    height: 100%;
+
+    .container {
+     width: 600px;
+     margin: 0 auto;
+    }
+  }
+
+  .products-option{
+
+    .products-wrapper {
+       padding-top: 75px;
+      &::after {
+        display: block;
+        width: 610px;
+
+      }
+      &::before {
+        width: 610px;
+        bottom: calc(23% + 12px);
+      }
+      .products__title {
+        margin-bottom: 60px;
+      }
+      .products__items {
+          display: flex;
+          flex-wrap: wrap;
+
+      }
+      .products__item {
+        width: 50%;
+        margin-bottom: 400px;
+        &::before {
+          display: none;
+        }
+        &-title {
+          font-size: 28px;
+        }
+      }
+
+    }
+  }
+}
+
+@media not screen and (orientation: portrait), (max-height: 1200px) {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+  .products-option {
+    height: 100%;
+
+    .container {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+  .products-option{
+    background-position: inherit;
+    background-size: cover;
+    .products-wrapper {
+      padding-top: 50px;
+      &::after {
+        display: none;
+        width: 610px;
+
+      }
+      &::before {
+        display: none;
+        width: 610px;
+        bottom: calc(23% + 12px);
+      }
+      .products__title {
+        margin-bottom: 60px;
+      }
+      .products__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+      }
+      .products__item {
+        width: 100%;
+        margin-bottom: 420px;
+
+
+        &::before {
+          display: block;
+        }
+        &-title {
+          font-size: 24px;
+        }
+        .products__price-wrapper {
+
+          .products__price-items {
+
+            .products__price-title {
+              font-size: 24px;
+            }
+            .products__price-subtitle {
+              font-size: 38px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

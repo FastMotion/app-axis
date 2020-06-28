@@ -1,0 +1,200 @@
+@import "libs";
+@import "vars";
+@import "fonts";
+@import "global";
+
+
+.products-option {
+  height: 100vh;
+  background-image: url("../img/bg.png");
+  background-color: #e35f8b;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+
+  }
+  .products-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 170px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      max-width: 1110px;
+      width: 100%;
+      height: 21px;
+      background-image: url("../img/doska1.png");
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      display: none;
+      max-width: 1110px;
+      width: 100%;
+      height: 21px;
+      background-image: url("../img/doska1.png");
+      position: absolute;
+      top: calc(30% + 3px);
+      z-index: 1;
+
+    }
+
+
+    .products__title {
+      font-family: "Evogria", sans-serif;
+      font-size: 48px;
+      line-height: 40px;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 92px;
+      text-transform: uppercase;
+
+    }
+    .products__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1090px;
+      width: 100%;
+
+    }
+    .products__item {
+      flex-direction: column;
+      max-width: 239px;
+      width: 100%;
+      position: relative;
+      &::before {
+        content: '';
+        display: none;
+        width: 252px;
+        height: 21px;
+        background-image: url("../img/doska2.png");
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        right: calc(-11px/2);
+      }
+
+      &-title {
+        font-size: 36px;
+        font-weight: 400;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 27px;
+      }
+      &-img {
+         text-align: center;
+        width: 100%;
+        max-width: 289px;
+        position: relative;
+        .img {
+          max-width: 179px;
+          width: 100%;
+        }
+        .products__price-wrapper {
+          position: absolute;
+          background-image: url("../img/offerbg.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          height: 407px;
+          max-width: 291px;
+          width: 100%;
+          top:60%;
+
+          .products__price-items {
+            margin-top: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .products__price-title {
+               font-family: 'Bebas Neue Regular', sans-serif;
+               font-size: 24px;
+               font-weight: 400;
+               color: #ffffff;
+              text-align: center;
+            }
+            .products__price-subtitle {
+              font-family: 'Bebas Neue Regular', sans-serif;
+              font-size: 60px;
+              font-weight: 400;
+              color: #ffffff;
+              text-align: center;
+              padding-right: 31px;
+              margin-top: 10px;
+              margin-bottom: 40px;
+              position: relative;
+
+              .discount-price {
+                font-family: 'Bebas Neue Regular', sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                color: #ffffff;
+                text-decoration: line-through;
+                margin-left: 6px;
+                position: absolute;
+                top: 12%;
+              }
+            }
+            .item-price {
+              max-width: 124px;
+              width: 100%;
+              position: relative;
+
+              .item-price__buy {
+                position: absolute;
+                top: 12%;
+                right: -9%;
+                cursor: pointer;
+                &-wrapper {
+
+                  &::before {
+                    content: '';
+                    display: block;
+                    visibility: hidden;
+                    opacity: 0;
+                    width: 67px;
+                    height: 51px;
+                    background-image: url("../img/button.png");
+                    position: absolute;
+                    top: -50%;
+                    right: -86%;
+                    transition:all 0.4s linear;
+
+                  }
+                  &:hover:before {
+                    visibility: visible;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@import "media";
+
+
+
+
+
